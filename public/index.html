@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Populate the Mongoose DB</title>
+
+  <body>
+    <h1>Enter an article into the Mongoose Database</h1>
+    <form action="/submit" method="post">
+      <input cols ="70" type="text" name="headline" placeholder="headline"><br/>
+      <textarea rows="10" cols ="70" type="text" name="summary" placeholder="summary"></textarea><br/>
+      <input cols ="70" type="text" name="url" placeholder="url"><br/>
+
+
+      <input type="submit">
+      <a href="/articles">See your articles!</a>
+      <a href="/websites">See your websites!</a>
+      <a href="/populated">See your websites, populated with articles!</a>
+    </form>
+  </body>
+</html>
