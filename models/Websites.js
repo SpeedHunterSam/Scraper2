@@ -24,7 +24,7 @@ const WebsitesSchema = new Schema({
 });
 
 // This creates our model from the above schema, using mongoose's model method
-const Websites = mongoose.model("Websites", WebsitesSchema);
+var Websites = mongoose.model("Websites", WebsitesSchema);
 
 // Export the Websites model
 module.exports = Websites;

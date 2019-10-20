@@ -23,10 +23,11 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/Scraper", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/Scraper", { useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.set("useCreateIndex", true);
 
 // When the server starts, create and save a new Websites document to the db
-// The "unique" rule in the Websites model's schema will prevent duplicate libraries from being added to the server
+// The "unique" rule in the Websites model's schema will prevent duplicate collections from being added to the server
 db.Websites.create({ name: "User Inputted Websites" })
   .then(function(dbWebsites) {
     // If saved successfully, print the new Websites document to the console
