@@ -1,14 +1,18 @@
+<h1>Input</h1>
+<form action="/submit" method="post">
+  <div class="form-group">
+    <label for="ArticleInput">Headline</label>
+    <input type="text" class="form-control" id="ArticleInput" name="headline">
+  </div>
+    <div class="form-group">
+    <label for="ArticleInput">URL</label>
+    <input type="text" class="form-control" id="ArticleInput" name="url">
+  </div>
+  <div class="form-group">
+    <label for="ArticleInput">Article Summary</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"vname="summary"></textarea>
+  </div>
 
-    <h1>Input</h1>
-    <form action="/submit" method="post">
-      <input cols ="70" type="text" name="headline" placeholder="headline"><br/>
-      <textarea rows="10" cols ="70" type="text" name="summary" placeholder="summary"></textarea><br/>
-      <input cols ="70" type="text" name="url" placeholder="url"><br/>
+  <button type="submit" class="btn btn-primary">Submit</button>
 
-
-      <input type="submit">
-      <a href="/articles">See your articles!</a>
-      <a href="/websites">See your websites!</a>
-      <a href="/populated">See your websites, populated with articles!</a>
-    </form>
-
+</form>
