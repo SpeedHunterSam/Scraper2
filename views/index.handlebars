@@ -1,10 +1,16 @@
-<h1>Input</h1>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Add an Article</h1>
+    <p class="lead"><a href="/articles">...or see your articles!</a></p>
+  </div>
+</div>
+
 <form action="/submit" method="post">
   <div class="form-group">
     <label for="ArticleInput">Headline</label>
     <input type="text" class="form-control" id="ArticleInput" name="headline">
   </div>
-    <div class="form-group">
+  <div class="form-group">
     <label for="ArticleInput">URL</label>
     <input type="text" class="form-control" id="ArticleInput" name="url">
   </div>
@@ -16,3 +22,5 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 
 </form>
+<br/>
+<a href="/articles">See your articles!</a><br />

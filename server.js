@@ -49,6 +49,8 @@ db.Websites.create({ name: "User Inputted Websites" })
     console.log(err.message);
   });
 
+
+
 // Routes
 
 app.get("/", function(req, res) {
@@ -79,7 +81,17 @@ app.post("/submit", function(req, res) {
 app.get("/articles", function(req, res) {
   db.Article.find({})
     .then(function(dbArticle) {
-      res.json(dbArticle);
+      //res.json(dbArticle);
+
+      console.log(dbArticle);
+
+      const hbsObject = {
+        article: dbArticle
+    }
+    console.log(hbsObject);
+    res.render("articles", hbsObject);
+   
+
     })
     .catch(function(err) {
       res.json(err);
