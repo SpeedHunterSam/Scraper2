@@ -1,12 +1,15 @@
 <div class="col-sm">
     {{#each article}}
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">{{headline}}</h5>
-            <p class="card-text" >{{summary}}</p>
-            <a href="{{url}}" class="card-link">Link to Article</a>
-        </div>
-    </div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">{{headline}}</h1>
+    <p class="lead">{{summary}}</p>
+    <a href="{{url}}" class="card-link">Link to Article</a>
+
+  </div>
+</div>
+
 
     {{/each}}
 </div>
