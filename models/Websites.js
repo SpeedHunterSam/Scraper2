@@ -12,9 +12,6 @@ const WebsitesSchema = new Schema({
     type: String,
     unique: true
   },
-  // `books` is an array that stores ObjectIds
-  // The ref property links these ObjectIds to the Book model
-  // This allows us to populate the Websites with any associated Books
   articles: [
     {
       type: Schema.Types.ObjectId,
