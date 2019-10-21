@@ -30,11 +30,12 @@ app.set("view engine", "handlebars");
 
 // Connect to the Mongo DB
 //mongoose.connect("mongodb://localhost/Scraper", { useUnifiedTopology: true, useNewUrlParser: true });
-//mongoose.set("useCreateIndex", true);
 
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/Scraper";
 
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI,  { useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.set("useCreateIndex", true);
+
 
 // When the server starts, create and save a new Websites document to the db
 // The "unique" rule in the Websites model's schema will prevent duplicate collections from being added to the server
