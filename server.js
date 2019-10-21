@@ -19,8 +19,14 @@ app.use(logger("dev"));
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Make public a static folder
-app.use(express.static("public"));
+// Make public a static folder ---- USE for static HTML PAGES ONLY
+//app.use(express.static("public"));
+
+//activate handlebars for page generation
+app.set("views", path.join(__dirname, "views"));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 
 // Connect to the Mongo DB
 mongoose.connect("mongodb://localhost/Scraper", { useUnifiedTopology: true, useNewUrlParser: true });
@@ -39,6 +45,16 @@ db.Websites.create({ name: "User Inputted Websites" })
   });
 
 // Routes
+
+app.get("/", function(req, res) {
+
+    
+  
+      res.render("index");
+     
+
+});
+
 
 app.post("/submit", function(req, res) {
   db.Article.create(req.body)
